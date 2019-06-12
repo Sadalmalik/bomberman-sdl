@@ -3,13 +3,19 @@
 #include "functions.h"
 #include "GameObject.h"
 
+class TileSet;
+class AnimatedImage;
+
 class TestObject : public GameObject
 {
 	int angle = 0;
-	float speed = 0.5f;
-	SDL_Texture *image = NULL;
+	float speedA = 0.57f;
+	float speedB = 1.31f;
+	SDL_Texture *image = nullptr;
 
-	SDL_Rect tile;
+	TileSet *tileSet = nullptr;
+	AnimatedImage *anim = nullptr;
+
 	SDL_Rect rect;
 public:
 	TestObject();

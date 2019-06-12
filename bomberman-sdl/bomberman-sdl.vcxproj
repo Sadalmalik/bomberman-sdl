@@ -157,31 +157,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnimatedImage.cpp" />
+    <ClCompile Include="Array2D.h" />
     <ClCompile Include="BombermanGameManager.cpp" />
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="Geometry.cpp" />
+    <ClCompile Include="Level.cpp" />
     <ClCompile Include="main.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="PathFinding.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="TestObject.cpp" />
+    <ClCompile Include="TileImage.cpp" />
     <ClCompile Include="tileset.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimatedImage.h" />
     <ClInclude Include="BombermanGameManager.h" />
     <ClInclude Include="functions.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Geometry.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="PathFinding.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="TestObject.h" />
+    <ClInclude Include="TileImage.h" />
     <ClInclude Include="tileset.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

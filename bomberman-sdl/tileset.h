@@ -1,16 +1,18 @@
 #pragma once
 
-#include <SDL.h>
+#include "pch.h"
 
-class Tileset
+class TileSet
 {
 	int tileXSize;
 	int tileYSize;
 	int textureXSize;
 	int textureYSize;
+	int tilesXCount;
+	int tilesYCount;
 	SDL_Texture*texture;
 public:
-	Tileset(SDL_Texture*texture, int x, int y);
+	TileSet(SDL_Texture*texture, int tileXSize, int tileYSize);
 
 	void GetTileRect(SDL_Rect&rect, int tile);
 	void CalculateRect(SDL_Rect&rect, int x, int y);

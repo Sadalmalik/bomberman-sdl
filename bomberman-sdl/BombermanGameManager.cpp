@@ -24,7 +24,7 @@ void BombermanGameManager::Update()
 			_scene->AddObject(obj);
 			_test.push_back(obj);
 
-			_delay = 30;
+			_delay = 10;
 		}
 	}
 
@@ -32,12 +32,11 @@ void BombermanGameManager::Update()
 
 void BombermanGameManager::Dispose()
 {
-	printf("Destroy test objects!");
+	printf("BombermanGameManager::Dispose");
 
 	for (auto obj : _test)
 	{
 		_scene->RemoveObject(obj);
-		obj->Dispose();
 		delete obj;
 	}
 

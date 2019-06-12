@@ -15,7 +15,7 @@ class Game
 	GameManager* _gameManager = nullptr;
 
 public:
-	Uint32 targetFPS = 60;
+	Uint32 targetFPS = 30;
 
 	const int WIDTH = 800;
 	const int HEIGHT = 600;

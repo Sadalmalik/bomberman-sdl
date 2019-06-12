@@ -56,6 +56,8 @@ void Scene::Render()
 
 void Scene::Dispose()
 {
+	printf("Scene::Dispose");
+
 	for (auto obj : _objects)
 		obj->Dispose();
 

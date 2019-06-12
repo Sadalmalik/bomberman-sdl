@@ -3,24 +3,28 @@
 #include "functions.h"
 #include "Tileset.h"
 
-Tileset::Tileset(SDL_Texture*tex, int x, int y)
+TileSet::TileSet(SDL_Texture*tex, int tileXSize, int tileYSize)
 {
-	tileXSize = x;
-	tileYSize = y;
+	this->tileXSize = tileXSize;
+	this->tileYSize = tileYSize;
 	texture = tex;
 	SDL_QueryTexture(tex, NULL, NULL, &textureXSize, &textureYSize);
+	tilesXCount = textureXSize / tileXSize;
+	tilesYCount = textureYSize / tileYSize;
 }
 
-void Tileset::GetTileRect(SDL_Rect&rect, int tile)
+void TileSet::GetTileRect(SDL_Rect&rect, int tile)
 {
+	int x = tile % tilesXCount;
+	int y = tile / tilesXCount;
 	SetupRect(&rect,
-		tile % tileXSize,
-		tile / tileXSize,
+		x * tileXSize,
+		y * tileXSize,
 		tileXSize,
 		tileYSize);
 }
 
-void Tileset::CalculateRect(SDL_Rect&rect, int x, int y)
+void TileSet::CalculateRect(SDL_Rect&rect, int x, int y)
 {
 	SetupRect(&rect,
 		x * tileXSize,
@@ -29,7 +33,7 @@ void Tileset::CalculateRect(SDL_Rect&rect, int x, int y)
 		tileYSize);
 }
 
-void Tileset::DrawTile(SDL_Renderer*renderer, int tile, SDL_Rect&rect)
+void TileSet::DrawTile(SDL_Renderer*renderer, int tile, SDL_Rect&rect)
 {
 	SDL_Rect tileRect;
 	GetTileRect(tileRect, tile);

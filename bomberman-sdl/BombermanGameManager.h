@@ -6,9 +6,11 @@
 
 class BombermanGameManager : public GameManager
 {
-	int _limit = 10;
+	size_t _limit = 25;
 	int _delay = 0;
 	std::vector<TestObject*>_test;
+
+
 public:
 	void Init();
 	void HandleEvent(SDL_Event&windowEvent);

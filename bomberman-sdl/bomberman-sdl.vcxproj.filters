@@ -8,9 +8,6 @@
     <ClCompile Include="game.cpp">
       <Filter>EngineCore</Filter>
     </ClCompile>
-    <ClCompile Include="Geometry.cpp">
-      <Filter>EngineCore</Filter>
-    </ClCompile>
     <ClCompile Include="Scene.cpp">
       <Filter>EngineCore</Filter>
     </ClCompile>
@@ -23,6 +20,24 @@
     <ClCompile Include="BombermanGameManager.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Array2D.h">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="PathFinding.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimatedImage.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="TileImage.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -33,9 +48,6 @@
       <Filter>EngineCore</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.h">
-      <Filter>EngineCore</Filter>
-    </ClInclude>
-    <ClInclude Include="Geometry.h">
       <Filter>EngineCore</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
@@ -56,6 +68,21 @@
     <ClInclude Include="BombermanGameManager.h">
       <Filter>Game</Filter>
     </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="PathFinding.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="TileImage.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimatedImage.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Graphics">
@@ -66,6 +93,12 @@
     </Filter>
     <Filter Include="Game">
       <UniqueIdentifier>{bb387deb-da39-4434-8501-29bf8b603c6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Objects">
+      <UniqueIdentifier>{2b2ba272-0972-4bd6-aa60-533d62087928}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{1674e3db-7e60-44eb-b14b-9c24694e9784}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

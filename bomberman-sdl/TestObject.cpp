@@ -1,6 +1,8 @@
 #include "pch.h"
 
 #include "TestObject.h"
+#include "TileSet.h"
+#include "AnimatedImage.h"
 
 TestObject::TestObject()
 {
@@ -8,36 +10,37 @@ TestObject::TestObject()
 
 void TestObject::Init(SDL_Renderer*rend)
 {
-	printf("\nTestObject::Init <%08x>", rend);
+	printf("\nTestObject::Init <%16x>", (unsigned long long int)rend);
 	image = loadTexture("Tileset.png", rend);
 
-	SetupRect(&tile, 0, 6 * 16, 16, 32);
-	SetupRect(&rect, 0, 0, 4 * 16, 4 * 32);
+	tileSet = new TileSet(image, 16, 32);
+	anim = new AnimatedImage(tileSet, 0, 8, true);
+
+	SetupRect(&rect, 0, 0, 2 * 16, 2 * 32);
 }
 
 void TestObject::Update()
 {
-	printf("\nTestObject::Update");
 	angle++;
 
-	float a = angle * speed * Deg2Rad;
-	position.x = 50 + 50 * std::cos(a);
-	position.y = 50 + 50 * std::sin(a);
+	float a = angle * Deg2Rad;
+	position.x = 250 * (1 + std::cos(a * speedA));
+	position.y = 250 * (1 + std::sin(a * speedB));
 }
 
 void TestObject::Render(SDL_Renderer*rend)
 {
-	printf("\nTestObject::Render");
-	printf("\nDraw test object at %d %d", position.x, position.y);
-
 	rect.x = static_cast<int>(position.x);
 	rect.y = static_cast<int>(position.y);
-	SDL_RenderCopy(rend, image, &tile, &rect);
+
+	anim->Render(rend, rect);
 }
 
 void TestObject::Dispose()
 {
-	printf("\nTestObject::Dispose");
+	delete anim;
+	delete tileSet;
+
 	SDL_DestroyTexture(image);
 	image = nullptr;
 }

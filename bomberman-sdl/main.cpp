@@ -11,5 +11,11 @@ int main(int argsCount, char *args[])
 	Game game;
 	BombermanGameManager gameManager;
 
-	return game.Start(&gameManager);
+	int res = game.Start(&gameManager);
+	int xx;
+
+	std::cin >> xx;
+
+
+	return res;
 }
