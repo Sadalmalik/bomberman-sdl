@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="tileset.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry.cpp">
+      <Filter>EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="functions.cpp">
+      <Filter>EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="TestObject.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BombermanGameManager.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="tileset.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="functions.h">
+      <Filter>EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="TestObject.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="BombermanGameManager.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{fa698663-ebc7-4bd0-84df-b043e88fc82b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCore">
+      <UniqueIdentifier>{a0ed49c4-0ca1-4019-8f6e-0526459338d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{bb387deb-da39-4434-8501-29bf8b603c6f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
