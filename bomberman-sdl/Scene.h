@@ -7,9 +7,11 @@ class Scene
 {
 	SDL_Renderer*_renderer;
 	std::vector<GameObject*>_objects;
-public:
+
 	Scene();
 	~Scene();
+public:
+	static Scene* GetInstance();
 
 	void AddObject(GameObject*object);
 	void RemoveObject(GameObject*object);

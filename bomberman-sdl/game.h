@@ -15,13 +15,15 @@ class Game
 	GameManager* _gameManager = nullptr;
 
 public:
-	Uint32 targetFPS = 30;
+	Uint32 targetFPS = 60;
 
 	const int WIDTH = 800;
 	const int HEIGHT = 600;
 
 	Game();
 	~Game();
+
+	SDL_Renderer* GetRenderer() const;
 
 	void SetWindowTitle(const char*title);
 	void SetWindowSize(int width, int height);

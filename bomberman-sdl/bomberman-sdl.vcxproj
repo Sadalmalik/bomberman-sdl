@@ -159,6 +159,7 @@
   <ItemGroup>
     <ClCompile Include="AnimatedImage.cpp" />
     <ClCompile Include="Array2D.h" />
+    <ClCompile Include="BombermanAssets.cpp" />
     <ClCompile Include="BombermanGameManager.cpp" />
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="game.cpp" />
@@ -175,9 +176,11 @@
     <ClCompile Include="TestObject.cpp" />
     <ClCompile Include="TileImage.cpp" />
     <ClCompile Include="tileset.cpp" />
+    <ClCompile Include="Wall.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimatedImage.h" />
+    <ClInclude Include="BombermanAssets.h" />
     <ClInclude Include="BombermanGameManager.h" />
     <ClInclude Include="functions.h" />
     <ClInclude Include="game.h" />
@@ -192,6 +195,7 @@
     <ClInclude Include="TestObject.h" />
     <ClInclude Include="TileImage.h" />
     <ClInclude Include="tileset.h" />
+    <ClInclude Include="Wall.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

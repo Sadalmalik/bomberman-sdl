@@ -12,10 +12,10 @@ int main(int argsCount, char *args[])
 	BombermanGameManager gameManager;
 
 	int res = game.Start(&gameManager);
-	int xx;
 
-	std::cin >> xx;
-
+	printf("Press any key to continue: ");
+	char c;
+	std::cin >> c;
 
 	return res;
 }

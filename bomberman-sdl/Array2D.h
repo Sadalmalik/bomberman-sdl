@@ -25,7 +25,6 @@ public:
 	int32_t XSize() const;
 	int32_t YSize() const;
 
-	T* GetArray() const;
 	T& Get(int32_t idx) const;
 	T& Get(int32_t x, int32_t y) const;
 
@@ -64,7 +63,8 @@ void Array2D<T>::Resize(int32_t sx, int32_t sy)
 	_xSize = sx;
 	_ySize = sy;
 	_length = sx * sy;
-	if (data_) delete data_;
+	if (data_) delete[] data_;
+	data_ = new T[_length];
 }
 
 template<typename T>
@@ -86,8 +86,8 @@ template<typename T>
 bool Array2D<T>::ValidIndex(int32_t x, int32_t y) const
 {
 	return data_ && (
-		0 < x && x < _xSize &&
-		0 < y && y < _ySize );
+		0 <= x && x < _xSize &&
+		0 <= y && y < _ySize );
 }
 
 template<typename T>
@@ -111,17 +111,11 @@ int32_t Array2D<T>::YSize() const
 //================================================================================//
 
 template<typename T>
-T* Array2D<T>::GetArray() const
-{
-	return data_;
-}
-
-template<typename T>
 T& Array2D<T>::Get(const int32_t idx) const
 {
 	if (ValidIndex(idx))
 		return data_[idx];
-	return nullptr;
+	throw std::out_of_range("2D Array index out of range!");
 }
 
 template<typename T>
@@ -129,7 +123,7 @@ T& Array2D<T>::Get(int32_t x, int32_t y)	const
 {
 	if (ValidIndex(x, y))
 		return Get(x + _xSize * y);
-	return nullptr;
+	throw std::out_of_range("2D Array x, y out of range!");
 }
 
 template<typename T>

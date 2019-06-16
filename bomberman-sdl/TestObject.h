@@ -11,9 +11,7 @@ class TestObject : public GameObject
 	int angle = 0;
 	float speedA = 0.57f;
 	float speedB = 1.31f;
-	SDL_Texture *image = nullptr;
 
-	TileSet *tileSet = nullptr;
 	AnimatedImage *anim = nullptr;
 
 	SDL_Rect rect;

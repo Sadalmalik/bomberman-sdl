@@ -11,8 +11,15 @@ Scene::Scene() :
 Scene::~Scene()
 {}
 
+Scene* Scene::GetInstance()
+{
+	static Scene instance;
+	return &instance;
+}
+
 void Scene::AddObject(GameObject*object)
 {
+	printf("\nAdd object <%016x> to scene!", object);
 	_objects.push_back(object);
 	object->Init(_renderer);
 }
@@ -22,6 +29,7 @@ void Scene::RemoveObject(GameObject*object)
 	auto it = std::find(_objects.begin(), _objects.end(), object);
 	if (it != _objects.end())
 		_objects.erase(it);
+	printf("\nScene::RemoveObject <%016x>", object);
 	object->Dispose();
 }
 
@@ -56,10 +64,13 @@ void Scene::Render()
 
 void Scene::Dispose()
 {
-	printf("Scene::Dispose");
+	printf("\nScene::Dispose");
 
 	for (auto obj : _objects)
+	{
+		printf("\nScene::Dispose object <%016x>", obj);
 		obj->Dispose();
+	}
 
 	_objects.clear();
 }

@@ -8,13 +8,17 @@ class AnimatedImage : public Image
 	int _start;
 	int _end;
 	TileSet*_tileset;
-	int _idx;
+	Uint32 _endTime;
+	Uint32 _duration;
 public:
 	bool loop;
-	bool complete;
 
-	AnimatedImage(TileSet*set, int start, int end, bool loop = true);
+	AnimatedImage(TileSet*set, int startFrame, int endFrame, bool loop = true);
 	~AnimatedImage();
+
+	void SetDuration(Uint32 duration);
+	bool Complete();
+	void Start();
 
 	void Render(SDL_Renderer*rend, SDL_Rect& rect);
 };

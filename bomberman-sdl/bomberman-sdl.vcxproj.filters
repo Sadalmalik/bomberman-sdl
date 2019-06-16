@@ -14,13 +14,7 @@
     <ClCompile Include="functions.cpp">
       <Filter>EngineCore</Filter>
     </ClCompile>
-    <ClCompile Include="TestObject.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="BombermanGameManager.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Level.cpp">
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="Geometry.cpp">
@@ -37,6 +31,16 @@
     </ClCompile>
     <ClCompile Include="TileImage.cpp">
       <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="BombermanAssets.cpp" />
+    <ClCompile Include="Level.cpp">
+      <Filter>Game\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="TestObject.cpp">
+      <Filter>Game\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Wall.cpp">
+      <Filter>Game\Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,16 +63,10 @@
     <ClInclude Include="Image.h">
       <Filter>Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="TestObject.h">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="GameManager.h">
       <Filter>EngineCore</Filter>
     </ClInclude>
     <ClInclude Include="BombermanGameManager.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Level.h">
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="Geometry.h">
@@ -82,6 +80,18 @@
     </ClInclude>
     <ClInclude Include="AnimatedImage.h">
       <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="BombermanAssets.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Game\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="TestObject.h">
+      <Filter>Game\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Wall.h">
+      <Filter>Game\Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +109,9 @@
     </Filter>
     <Filter Include="Utils">
       <UniqueIdentifier>{1674e3db-7e60-44eb-b14b-9c24694e9784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{e5777109-87cb-4626-8484-f8b36d9a4510}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

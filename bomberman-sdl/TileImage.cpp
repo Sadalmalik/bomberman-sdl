@@ -3,7 +3,8 @@
 #include "TileImage.h"
 
 TileImage::TileImage(TileSet*ts, int index) : _index(index), _tileset(ts)
-{}
+{
+}
 
 TileImage::~TileImage()
 {

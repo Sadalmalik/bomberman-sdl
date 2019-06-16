@@ -4,10 +4,16 @@
 
 #include "game.h"
 #include "scene.h"
+#include "BombermanAssets.h"
 
 Game::Game() {}
 
 Game::~Game() {}
+
+SDL_Renderer * Game::GetRenderer() const
+{
+	return _renderer;
+}
 
 void Game::SetWindowTitle(const char*title)
 {
@@ -101,6 +107,7 @@ void Game::Render()
 	SDL_SetRenderDrawColor(_renderer, 8, 8, 32, 255);
 	SDL_RenderClear(_renderer);
 
+	_gameManager->Render(_renderer);
 	_scene->Render();
 
 	SDL_RenderPresent(_renderer);
@@ -108,7 +115,9 @@ void Game::Render()
 
 void Game::MainLoop()
 {
-	_scene = new Scene();
+	BombermanAssets::Init(_renderer);
+
+	_scene = Scene::GetInstance();
 	_scene->Init(_renderer);
 
 	if (_gameManager)
@@ -136,6 +145,8 @@ void Game::MainLoop()
 		_gameManager->Dispose();
 
 	_scene->Dispose();
+
+	BombermanAssets::Dispose();
 }
 
 void Game::Dispose()

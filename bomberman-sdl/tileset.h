@@ -4,18 +4,21 @@
 
 class TileSet
 {
+	SDL_Texture*_texture;
+public:
 	int tileXSize;
 	int tileYSize;
 	int textureXSize;
 	int textureYSize;
 	int tilesXCount;
 	int tilesYCount;
-	SDL_Texture*texture;
-public:
+	int tilesCount;
+
 	TileSet(SDL_Texture*texture, int tileXSize, int tileYSize);
 
-	void GetTileRect(SDL_Rect&rect, int tile);
-	void CalculateRect(SDL_Rect&rect, int x, int y);
+	SDL_Texture* GetTexture() const;
+	void GetTileRect(SDL_Rect&rect, int tile) const;
+	void CalculateRect(SDL_Rect&rect, int x, int y) const;
 
 	void DrawTile(SDL_Renderer*renderer, int tile, SDL_Rect&rect);
 };
