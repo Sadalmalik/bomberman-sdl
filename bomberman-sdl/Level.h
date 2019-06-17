@@ -11,7 +11,10 @@ public:
 	bool passed = false;
 	bool damage = false;
 	bool indestructible = false;
+
+	GameObject*floor = nullptr;
 	GameObject*wall = nullptr;
+	GameObject*explosion = nullptr;
 
 	LevelCell();
 	~LevelCell();

@@ -5,7 +5,7 @@
 #include "TestObject.h"
 #include "Level.h"
 
-class BombermanGameManager : public GameManager
+class BombermanGame : public GameManager
 {
 	size_t _limit = 25;
 	int _delay = 0;

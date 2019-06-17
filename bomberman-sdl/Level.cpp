@@ -3,6 +3,7 @@
 #include "functions.h"
 #include "Level.h"
 #include "BombermanAssets.h"
+#include "Sprite.h"
 #include "Wall.h"
 
 LevelCell::LevelCell() : wall(nullptr)
@@ -31,6 +32,8 @@ void Level::LoadDefaultLevel()
 		for (int y = 0; y < gridYSize; y++)
 		{
 			LevelCell& cell = _level.Get(x, y);
+
+			cell.floor = new Sprite(BombermanAssets::CreateGrass(), 32, 32);
 
 			if (x == 0 || x == gridXSize - 1 || y == 0 || y == gridYSize - 1)
 			{
@@ -104,6 +107,8 @@ void Level::Dispose()
 		LevelCell& cell = _level.Get(i);
 		if (cell.wall)
 			_scene->RemoveObject(cell.wall);
+
+		delete cell.wall;
 	}
 
 	delete _grass;

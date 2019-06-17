@@ -1,23 +1,23 @@
 #include "pch.h"
 
 #include "Game.h"
-#include "BombermanGameManager.h"
+#include "BombermanGame.h"
 
-void BombermanGameManager::Init()
+void BombermanGame::Init()
 {
-	printf("BombermanGameManager::Init");
+	printf("BombermanGame::Init");
 
 	level = new Level();
 	level->LoadDefaultLevel();
 	level->Init(_game->GetRenderer());
 }
 
-void BombermanGameManager::HandleEvent(SDL_Event&windowEvent)
+void BombermanGame::HandleEvent(SDL_Event&windowEvent)
 {
 
 }
 
-void BombermanGameManager::Update()
+void BombermanGame::Update()
 {
 	if (_test.size() < _limit)
 	{
@@ -36,14 +36,14 @@ void BombermanGameManager::Update()
 	level->Update();
 }
 
-void BombermanGameManager::Render(SDL_Renderer*rend)
+void BombermanGame::Render(SDL_Renderer*rend)
 {
 	level->Render(rend);
 }
 
-void BombermanGameManager::Dispose()
+void BombermanGame::Dispose()
 {
-	printf("BombermanGameManager::Dispose");
+	printf("BombermanGame::Dispose");
 
 	level->Dispose();
 

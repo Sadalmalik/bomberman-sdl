@@ -160,7 +160,7 @@
     <ClCompile Include="AnimatedImage.cpp" />
     <ClCompile Include="Array2D.h" />
     <ClCompile Include="BombermanAssets.cpp" />
-    <ClCompile Include="BombermanGameManager.cpp" />
+    <ClCompile Include="BombermanGame.cpp" />
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="Geometry.cpp" />
@@ -173,6 +173,7 @@
     </ClCompile>
     <ClCompile Include="PathFinding.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="TestObject.cpp" />
     <ClCompile Include="TileImage.cpp" />
     <ClCompile Include="tileset.cpp" />
@@ -181,7 +182,7 @@
   <ItemGroup>
     <ClInclude Include="AnimatedImage.h" />
     <ClInclude Include="BombermanAssets.h" />
-    <ClInclude Include="BombermanGameManager.h" />
+    <ClInclude Include="BombermanGame.h" />
     <ClInclude Include="functions.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="GameManager.h" />
@@ -192,6 +193,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Image.h" />
+    <ClInclude Include="Sprite.h" />
     <ClInclude Include="TestObject.h" />
     <ClInclude Include="TileImage.h" />
     <ClInclude Include="tileset.h" />

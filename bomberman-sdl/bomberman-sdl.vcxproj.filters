@@ -14,9 +14,6 @@
     <ClCompile Include="functions.cpp">
       <Filter>EngineCore</Filter>
     </ClCompile>
-    <ClCompile Include="BombermanGameManager.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="Geometry.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
@@ -40,6 +37,12 @@
       <Filter>Game\Objects</Filter>
     </ClCompile>
     <ClCompile Include="Wall.cpp">
+      <Filter>Game\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="BombermanGame.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
       <Filter>Game\Objects</Filter>
     </ClCompile>
   </ItemGroup>
@@ -66,9 +69,6 @@
     <ClInclude Include="GameManager.h">
       <Filter>EngineCore</Filter>
     </ClInclude>
-    <ClInclude Include="BombermanGameManager.h">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="Geometry.h">
       <Filter>Utils</Filter>
     </ClInclude>
@@ -91,6 +91,12 @@
       <Filter>Game\Objects</Filter>
     </ClInclude>
     <ClInclude Include="Wall.h">
+      <Filter>Game\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="BombermanGame.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
       <Filter>Game\Objects</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,7 +1,7 @@
 ﻿#include "pch.h"
 
 #include "game.h"
-#include "BombermanGameManager.h"
+#include "BombermanGame.h"
 
 
 int main(int argsCount, char *args[])
@@ -9,7 +9,7 @@ int main(int argsCount, char *args[])
 	srand((Uint32)time(0));
 
 	Game game;
-	BombermanGameManager gameManager;
+	BombermanGame gameManager;
 
 	int res = game.Start(&gameManager);
 

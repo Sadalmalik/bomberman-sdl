@@ -62,7 +62,6 @@ void Wall::Render(SDL_Renderer*rend)
 
 void Wall::Dispose()
 {
-	printf("\nDispose wall<%016x>: img<%016x>", this, _image);
 	delete _image;
 	delete _destroyAnimation;
 }
