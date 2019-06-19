@@ -64,7 +64,8 @@ void Array2D<T>::Resize(int32_t sx, int32_t sy)
 	_ySize = sy;
 	_length = sx * sy;
 	if (data_) delete[] data_;
-	data_ = new T[_length];
+	if (_length>0)
+		data_ = new T[_length];
 }
 
 template<typename T>

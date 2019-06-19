@@ -8,9 +8,6 @@
     <ClCompile Include="game.cpp">
       <Filter>EngineCore</Filter>
     </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>EngineCore</Filter>
-    </ClCompile>
     <ClCompile Include="functions.cpp">
       <Filter>EngineCore</Filter>
     </ClCompile>
@@ -20,9 +17,6 @@
     <ClCompile Include="Array2D.h">
       <Filter>Utils</Filter>
     </ClCompile>
-    <ClCompile Include="PathFinding.cpp">
-      <Filter>Utils</Filter>
-    </ClCompile>
     <ClCompile Include="AnimatedImage.cpp">
       <Filter>Graphics</Filter>
     </ClCompile>
@@ -30,20 +24,26 @@
       <Filter>Graphics</Filter>
     </ClCompile>
     <ClCompile Include="BombermanAssets.cpp" />
-    <ClCompile Include="Level.cpp">
-      <Filter>Game\Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="TestObject.cpp">
-      <Filter>Game\Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="Wall.cpp">
-      <Filter>Game\Objects</Filter>
-    </ClCompile>
     <ClCompile Include="BombermanGame.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="Sprite.cpp">
-      <Filter>Game\Objects</Filter>
+    <ClCompile Include="PlayerInput.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Game\Level</Filter>
+    </ClCompile>
+    <ClCompile Include="PathFinding.cpp">
+      <Filter>Game\Level</Filter>
+    </ClCompile>
+    <ClCompile Include="ExplosionController.cpp">
+      <Filter>Game\Level</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelCell.cpp">
+      <Filter>Game\Level</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -52,12 +52,6 @@
       <Filter>Graphics</Filter>
     </ClInclude>
     <ClInclude Include="game.h">
-      <Filter>EngineCore</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>EngineCore</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
       <Filter>EngineCore</Filter>
     </ClInclude>
     <ClInclude Include="functions.h">
@@ -72,9 +66,6 @@
     <ClInclude Include="Geometry.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="PathFinding.h">
-      <Filter>Utils</Filter>
-    </ClInclude>
     <ClInclude Include="TileImage.h">
       <Filter>Graphics</Filter>
     </ClInclude>
@@ -84,20 +75,32 @@
     <ClInclude Include="BombermanAssets.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Level.h">
-      <Filter>Game\Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="TestObject.h">
-      <Filter>Game\Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Wall.h">
-      <Filter>Game\Objects</Filter>
-    </ClInclude>
     <ClInclude Include="BombermanGame.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Sprite.h">
-      <Filter>Game\Objects</Filter>
+    <ClInclude Include="Mob.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerInput.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveDirection.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Game\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="PathFinding.h">
+      <Filter>Game\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="ExplosionController.h">
+      <Filter>Game\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelCell.h">
+      <Filter>Game\Level</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -110,14 +113,14 @@
     <Filter Include="Game">
       <UniqueIdentifier>{bb387deb-da39-4434-8501-29bf8b603c6f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Objects">
-      <UniqueIdentifier>{2b2ba272-0972-4bd6-aa60-533d62087928}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Utils">
       <UniqueIdentifier>{1674e3db-7e60-44eb-b14b-9c24694e9784}</UniqueIdentifier>
     </Filter>
     <Filter Include="Audio">
       <UniqueIdentifier>{e5777109-87cb-4626-8484-f8b36d9a4510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Level">
+      <UniqueIdentifier>{15366d8d-56e5-460c-8ffb-563f9ee67642}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

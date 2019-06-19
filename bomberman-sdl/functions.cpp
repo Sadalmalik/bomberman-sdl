@@ -37,3 +37,8 @@ void SetupRect(SDL_Rect*rect, int x, int y, int w, int h)
 	rect->w = w;
 	rect->h = h;
 }
+
+float Random()
+{
+	return std::rand() / (float)RAND_MAX;
+}

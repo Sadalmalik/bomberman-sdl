@@ -7,6 +7,10 @@
 #include "AnimatedImage.h"
 #include "TileImage.h"
 
+int BombermanAssets::mobRadius = 16;
+int BombermanAssets::screenTileXSize = 32;
+int BombermanAssets::screenTileYSize = 32;
+
 SDL_Texture* BombermanAssets::texture;
 TileSet* BombermanAssets::tileset;
 TileSet* BombermanAssets::tilesetDouble;
@@ -50,59 +54,59 @@ TileImage* BombermanAssets::CreateSideWall()
 
 AnimatedImage* BombermanAssets::CreateWallDestroyAnimation()
 {
-	return new AnimatedImage(tilesetDouble, 0, 8, true);
+	return new AnimatedImage(tilesetDouble, 0, 8, 800, false);
 }
 
 AnimatedImage* BombermanAssets::CreateMobDeathAnimation()
 {
 	int frame = 16 * 0; // line
-	return new AnimatedImage(tileset, frame+8, frame + 16, true);
+	return new AnimatedImage(tileset, frame+8, frame + 16);
 }
 
 AnimatedImage* BombermanAssets::CreateMob1Animation()
 {
 	int frame = 16 * 1;
-	return new AnimatedImage(tileset, frame + 8, frame + 16, true);
+	return new AnimatedImage(tileset, frame + 8, frame + 16);
 }
 
 AnimatedImage* BombermanAssets::CreateMob2Animation()
 {
 	int frame = 16 * 2;
-	return new AnimatedImage(tileset, frame + 8, frame + 16, true);
+	return new AnimatedImage(tileset, frame + 8, frame + 16);
 }
 
 AnimatedImage* BombermanAssets::CreateMob3Animation()
 {
 	int frame = 16 * 3;
-	return new AnimatedImage(tileset, frame + 8, frame + 16, true);
+	return new AnimatedImage(tileset, frame + 8, frame + 16);
 }
 
 AnimatedImage* BombermanAssets::CreateEnlightAnimation()
 {
 	int frame = 16 * 2;
-	return new AnimatedImage(tileset, frame, frame+8, true);
+	return new AnimatedImage(tileset, frame, frame+8);
 }
 
 AnimatedImage* BombermanAssets::CreateBombAnimation()
 {
 	int frame = 16 * 3;
-	return new AnimatedImage(tileset, frame, frame + 8, true);
+	return new AnimatedImage(tileset, frame, frame + 8);
 }
 
 AnimatedImage* BombermanAssets::CreateExplosionAnimation()
 {
 	int frame = 16 * 4;
-	return new AnimatedImage(tileset, frame, frame + 8, true);
+	return new AnimatedImage(tileset, frame, frame + 8, 600, false);
 }
 
 AnimatedImage* BombermanAssets::CreatePortalAnimation()
 {
 	int frame = 16 * 5;
-	return new AnimatedImage(tileset, frame, frame + 8, true);
+	return new AnimatedImage(tileset, frame, frame + 8);
 }
 
 AnimatedImage* BombermanAssets::CreatePlayerDownAnimation()
 {
 	int frame = 16 * 4;
-	return new AnimatedImage(tilesetDouble, frame+8, frame + 8, true);
+	return new AnimatedImage(tilesetDouble, frame, frame + 8);
 }

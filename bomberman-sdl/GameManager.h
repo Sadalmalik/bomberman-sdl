@@ -1,14 +1,11 @@
 #pragma once
 
-#include "Scene.h"
-
 class Game;
 
 class GameManager
 {
 protected:
 	Game*_game;
-	Scene*_scene;
 public:
 
 	virtual void Init() = 0;

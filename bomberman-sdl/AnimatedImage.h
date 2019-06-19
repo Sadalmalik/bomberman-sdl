@@ -13,7 +13,7 @@ class AnimatedImage : public Image
 public:
 	bool loop;
 
-	AnimatedImage(TileSet*set, int startFrame, int endFrame, bool loop = true);
+	AnimatedImage(TileSet*set, int startFrame, int endFrame, int duration = 1000, bool loop = true);
 	~AnimatedImage();
 
 	void SetDuration(Uint32 duration);

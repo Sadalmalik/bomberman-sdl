@@ -9,6 +9,10 @@ class TileSet;
 class BombermanAssets
 {
 public:
+	static int mobRadius;
+	static int screenTileXSize;
+	static int screenTileYSize;
+
 	static SDL_Texture* texture;
 	static TileSet* tileset;
 	static TileSet* tilesetDouble;	//	walls uses 2 tile height

@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Scene.h"
 #include "GameManager.h"
 
 class Game
@@ -11,7 +10,6 @@ class Game
 	SDL_Renderer* _renderer = nullptr;
 	Uint32 _start = 0;
 
-	Scene* _scene = nullptr;
 	GameManager* _gameManager = nullptr;
 
 public:

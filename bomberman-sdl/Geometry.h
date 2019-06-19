@@ -22,6 +22,9 @@ public:
 
 	void Set(float X, float Y);
 
+	float Magnitude();
+	float SqrMagnitude();
+
 	static float Dot(Vector2&a, Vector2&b);
 
 	static Vector2 PositiveRotateBy90(Vector2 vec);
@@ -31,3 +34,23 @@ public:
 };
 
 #pragma pack(pop)
+
+
+
+
+struct AABB
+{
+public:
+	Vector2 min;
+	Vector2 max;
+
+	void Verify();
+};
+
+float Clamp(float value, float min, float max);
+
+bool Intersect(float a1, float b1, float a2, float b2);
+bool Intersect(AABB & a, AABB & b);
+
+bool IsInsideBox(AABB&box, Vector2&origin);
+Vector2 NearestPointInBox(AABB&box, Vector2&origin);

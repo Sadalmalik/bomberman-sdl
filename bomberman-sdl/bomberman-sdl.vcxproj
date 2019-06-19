@@ -161,10 +161,12 @@
     <ClCompile Include="Array2D.h" />
     <ClCompile Include="BombermanAssets.cpp" />
     <ClCompile Include="BombermanGame.cpp" />
+    <ClCompile Include="ExplosionController.cpp" />
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="Geometry.cpp" />
     <ClCompile Include="Level.cpp" />
+    <ClCompile Include="LevelCell.cpp" />
     <ClCompile Include="main.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -172,32 +174,31 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="PathFinding.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="Sprite.cpp" />
-    <ClCompile Include="TestObject.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerInput.cpp" />
     <ClCompile Include="TileImage.cpp" />
     <ClCompile Include="tileset.cpp" />
-    <ClCompile Include="Wall.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimatedImage.h" />
     <ClInclude Include="BombermanAssets.h" />
     <ClInclude Include="BombermanGame.h" />
+    <ClInclude Include="ExplosionController.h" />
     <ClInclude Include="functions.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="GameManager.h" />
-    <ClInclude Include="GameObject.h" />
     <ClInclude Include="Geometry.h" />
     <ClInclude Include="Level.h" />
+    <ClInclude Include="LevelCell.h" />
+    <ClInclude Include="Mob.h" />
+    <ClInclude Include="MoveDirection.h" />
     <ClInclude Include="PathFinding.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Scene.h" />
     <ClInclude Include="Image.h" />
-    <ClInclude Include="Sprite.h" />
-    <ClInclude Include="TestObject.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerInput.h" />
     <ClInclude Include="TileImage.h" />
     <ClInclude Include="tileset.h" />
-    <ClInclude Include="Wall.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

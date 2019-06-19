@@ -10,7 +10,7 @@ struct PathNode
 	LevelCell*cell;
 };
 
-PathNode* ReverseList(PathNode*head)
+PathNode* ReversePath(PathNode*head)
 {
 	PathNode*prev = nullptr;
 	PathNode*next = nullptr;

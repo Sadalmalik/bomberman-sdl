@@ -16,3 +16,11 @@ constexpr const T& clamp(const T& v, const T& lo, const T& hi)
 {
 	return v < lo ? lo : (hi < v ? hi : v);
 }
+
+float Random();
+
+template<typename T>
+float RandomRange(T min, T max)
+{
+	return min + (T)((max-min) * Random());
+}

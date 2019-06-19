@@ -3,7 +3,6 @@
 #include "functions.h"
 
 #include "game.h"
-#include "scene.h"
 #include "BombermanAssets.h"
 
 Game::Game() {}
@@ -99,7 +98,6 @@ void Game::Update()
 {
 	if (_gameManager)
 		_gameManager->Update();
-	_scene->Update();
 }
 
 void Game::Render()
@@ -108,7 +106,6 @@ void Game::Render()
 	SDL_RenderClear(_renderer);
 
 	_gameManager->Render(_renderer);
-	_scene->Render();
 
 	SDL_RenderPresent(_renderer);
 }
@@ -117,13 +114,9 @@ void Game::MainLoop()
 {
 	BombermanAssets::Init(_renderer);
 
-	_scene = Scene::GetInstance();
-	_scene->Init(_renderer);
-
 	if (_gameManager)
 	{
 		_gameManager->_game = this;
-		_gameManager->_scene = _scene;
 		_gameManager->Init();
 	}
 
@@ -143,8 +136,6 @@ void Game::MainLoop()
 
 	if (_gameManager)
 		_gameManager->Dispose();
-
-	_scene->Dispose();
 
 	BombermanAssets::Dispose();
 }

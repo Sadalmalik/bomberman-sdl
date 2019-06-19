@@ -1,41 +1,35 @@
 #pragma once
 
-#include "GameObject.h"
 #include "Array2D.h"
-#include "Scene.h"
-#include "TileImage.h"
 
-class LevelCell
-{
-public:
-	bool passed = false;
-	bool damage = false;
-	bool indestructible = false;
+#include "Mob.h"
+#include "LevelCell.h"
 
-	GameObject*floor = nullptr;
-	GameObject*wall = nullptr;
-	GameObject*explosion = nullptr;
+#include "ExplosionController.h"
 
-	LevelCell();
-	~LevelCell();
-};
-
-class Level : public GameObject
+class Level
 {
 	Array2D<LevelCell>_level;
-	Scene*_scene;
-	TileImage*_grass;
 public:
+	int xOffset;
+	int yOffset;
 	int gridXSize;
 	int gridYSize;
+	int bombTime = 2500;
 
-	Level();
+	//PathFinder*pathFinder;
+	ExplosionController*explosionController;
+
+	std::unordered_set<Mob*> mobs;
+
+	Level(int x=0, int y=0);
 
 	void LoadDefaultLevel();
 
 	void LoadLevel(std::string file);
 
-	void CollidePlayer(GameObject*player, float radius);
+	void PlantBomd(int x, int y);
+	void Explode(int x, int y, int power, MoveDirection direction = MoveDirection::None);
 
 	void Init(SDL_Renderer*rend);
 	void Update();
@@ -43,6 +37,7 @@ public:
 	void Dispose();
 
 	friend class PathFinder;
+	friend class ExplosionController;
 };
 
 
